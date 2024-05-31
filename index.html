@@ -27,7 +27,20 @@
       font-family: 'Montserrat', sans-serif;
       padding-left: 60px;
     }
-    
+
+    .header .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header .contact-info .fb-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('facebook-icon.png') no-repeat center center / cover;
+    }
+
     .main {
       padding: 20px;
     }
@@ -102,50 +115,35 @@
       text-align: center;
     }
 
-    .header .slogan {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.1em;
-      padding-right: 50px;
+    .footer .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+      width: 100%;
     }
 
-    .footer .contact {
-      margin-top: 10px;
+    .footer .footer-content .contact-item {
+      margin: 5px 0;
     }
 
-    @media only screen and (max-width: 600px) {
+   @media only screen and (max-width: 600px) {
       .header {
         flex-direction: column;
       }
 
       .header .h1 {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0px;
+        padding-left: 0;
       }
 
-      .footer .slogan {
+      .header .contact-info {
         flex-direction: column;
-        align-items: center;
-        padding-top: -20px;
-        padding-right: 0px;
+        gap: 10px;
       }
 
-      .footer {
-        align-items: center;
+      .footer .footer-content {
         flex-direction: column;
-      }
-
-      .header .contact {
-        margin-top: 10px;
-        align-items: center;
-        flex-direction: column;
-      }
-
-      .navigation {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
+        gap: 10px;
       }
 
       .products .product {
@@ -156,15 +154,15 @@
   </style>
 </head>
 <body>
-  <header class="header">
+ <header class="header">
     <div class="h1">
       <h1>BuyLow Pharmacy</h1>
-      <div class="contact">
-      For Orders, contact us at Viber: 
-      <br> 0917 579 2049 / 0992 700 7728 
-      <br> Facebook Page: BuylowPH
     </div>
+    <div class="contact-info">
+      <span>Viber: 0917 579 2049 / 0992 700 7728</span>
+      <a href="https://www.facebook.com/BuylowPH" target="_blank" class="fb-icon" aria-label="Facebook Page"></a>
     </div>
+  </header>
     
   </header>
 
@@ -355,11 +353,15 @@
     </div>
   </div>
 
-  <footer class="footer">
-     <div class="slogan">
-      "Mura at Mabisang Gamot"
+ <footer class="footer">
+    <div class="footer-content">
+      <div class="contact-item">Landline: 075-523-9534</div>
+      <div class="contact-item">"We accept both cash and gcash payments"</div>
+      <div class="contact-item">"Mura't Mabisang Gamot"</div>
+      <div class="contact-item">
+        <a href="https://www.google.com/maps/place/REM+CITIMED+PHARMA+DISTRIBUTOR+OFFICE/@16.0643882,120.3368546,21z/data=!4m6!3m5!1s0x3391675aff0f7905:0xcef4ab4757a55f68!8m2!3d16.0644656!4d120.3367375!16s%2Fg%2F11ff0vhmk2?entry=ttu" target="_blank" style="color: white; text-decoration: underline;">Location: Rem Bldg. Catacdang, Bonuan Gueset, Dagupan City</a>
+      </div>
     </div>
-
   </footer>
 </body>
 </html>
